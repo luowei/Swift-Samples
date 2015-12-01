@@ -96,7 +96,13 @@ class ViewController: UIViewController, UITextFieldDelegate {
     }
     
     func textChanged(text:String) {
-        UIAlertView(title: "Text改变了", message: "Text改变成了\(text)", delegate: nil, cancelButtonTitle: "OK").show()
+//        UIAlertView(title: "Text改变了", message: "Text改变成了\(text)", delegate: nil, cancelButtonTitle: "OK").show()
+        
+        let alertController = UIAlertController(title: "Text改变了", message: "Text改变成了\(text)", preferredStyle: UIAlertControllerStyle.Alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+        alertController.addAction(okAction)
+        self.presentViewController(alertController, animated: true, completion: nil)
+        
     }
 
     //当输入框完成编辑

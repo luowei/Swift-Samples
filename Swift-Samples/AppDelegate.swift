@@ -84,7 +84,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         switch tabBarViewController!.selectedIndex {
             //Swift学习
         case 0:
-            count = 1
+            count = 2
             
             //先锋Demo
         case 1:
@@ -109,6 +109,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
             switch indexPath.row {
             case 0:
                 cell!.textLabel!.text = "Enum,Struct,Property"
+            case 1:
+                cell!.textLabel!.text = "类型转换"
             default: break
             }
             
@@ -138,6 +140,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
                 let storeboard = UIStoryboard(name: "Main", bundle: nil)
                 let viewController = storeboard.instantiateInitialViewController() as! ViewController
                 navViewController1!.pushViewController(viewController, animated: true)
+                tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            case 1:
+                let typeCastVC = TypeCastViewController()
+                navViewController1!.pushViewController(typeCastVC, animated: true)
                 tableView.deselectRowAtIndexPath(indexPath, animated: true)
             default: break
             }

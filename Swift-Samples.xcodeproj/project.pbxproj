@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		BEF06AF10742BC6C0E343FB1 /* MutiScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF06FCD3A381384154199D2 /* MutiScrollViewController.swift */; };
+		EA0691E21C0D34FE003685E6 /* TypeCastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0691E11C0D34FE003685E6 /* TypeCastViewController.swift */; };
 		EAFDF2931BE8B43000E14EF7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDF2921BE8B43000E14EF7 /* AppDelegate.swift */; };
 		EAFDF2951BE8B43000E14EF7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EAFDF2941BE8B43000E14EF7 /* ViewController.swift */; };
 		EAFDF2981BE8B43000E14EF7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EAFDF2961BE8B43000E14EF7 /* Main.storyboard */; };
@@ -36,6 +37,7 @@
 
 /* Begin PBXFileReference section */
 		BEF06FCD3A381384154199D2 /* MutiScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutiScrollViewController.swift; sourceTree = "<group>"; };
+		EA0691E11C0D34FE003685E6 /* TypeCastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TypeCastViewController.swift; path = "Swift-Learn/TypeCastViewController.swift"; sourceTree = "<group>"; };
 		EAFDF28F1BE8B43000E14EF7 /* Swift-Samples.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swift-Samples.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAFDF2921BE8B43000E14EF7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EAFDF2941BE8B43000E14EF7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +86,14 @@
 			path = MutiScroll;
 			sourceTree = "<group>";
 		};
+		EA0691E01C0D348A003685E6 /* Swift-Learn */ = {
+			isa = PBXGroup;
+			children = (
+				EA0691E11C0D34FE003685E6 /* TypeCastViewController.swift */,
+			);
+			name = "Swift-Learn";
+			sourceTree = "<group>";
+		};
 		EAFDF2861BE8B43000E14EF7 = {
 			isa = PBXGroup;
 			children = (
@@ -107,6 +117,7 @@
 		EAFDF2911BE8B43000E14EF7 /* Swift-Samples */ = {
 			isa = PBXGroup;
 			children = (
+				EA0691E01C0D348A003685E6 /* Swift-Learn */,
 				EAFDF2921BE8B43000E14EF7 /* AppDelegate.swift */,
 				EAFDF2941BE8B43000E14EF7 /* ViewController.swift */,
 				EAFDF2961BE8B43000E14EF7 /* Main.storyboard */,
@@ -270,6 +281,7 @@
 				EAFDF2951BE8B43000E14EF7 /* ViewController.swift in Sources */,
 				EAFDF2931BE8B43000E14EF7 /* AppDelegate.swift in Sources */,
 				BEF06AF10742BC6C0E343FB1 /* MutiScrollViewController.swift in Sources */,
+				EA0691E21C0D34FE003685E6 /* TypeCastViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
