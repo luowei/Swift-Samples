@@ -88,7 +88,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
             
             //先锋Demo
         case 1:
-            count = 1
+            count = 2
         default:break
         }
         return count
@@ -119,6 +119,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
             switch indexPath.row {
             case 0:
                 cell!.textLabel!.text = "Multi Scroll"
+            case 1:
+                cell!.textLabel!.text = "测试视图"
             default: break
             }
             
@@ -154,6 +156,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
             case 0:
                 let mutiScrollVC = MutiScrollViewController()
                 navViewController2?.pushViewController(mutiScrollVC, animated: true)
+                tableView.deselectRowAtIndexPath(indexPath, animated: true)
+            case 1:
+                let testVC = TestViewController()
+                navViewController2?.pushViewController(testVC, animated: true)
                 tableView.deselectRowAtIndexPath(indexPath, animated: true)
             default: break
             }
