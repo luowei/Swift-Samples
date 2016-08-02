@@ -1,6 +1,6 @@
 //
 //  TestView.swift
-//  Lottery-Libs
+//  Third-Libs
 //
 //  Created by luowei on 15/12/10.
 //  Copyright © 2015年 2345. All rights reserved.

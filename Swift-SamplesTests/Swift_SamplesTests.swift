@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Swift_Samples
+//@testable import Swift_Samples
 
 class Swift_SamplesTests: XCTestCase {
     
@@ -24,6 +24,8 @@ class Swift_SamplesTests: XCTestCase {
     func testExample() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        print("=======UnitTest=======")
     }
     
     func testPerformanceExample() {
