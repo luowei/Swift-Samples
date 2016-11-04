@@ -2,15 +2,12 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "container:Swift-Samples.xcodeproj">
-   </FileRef>
-   <FileRef
-      location = "group:Pods/Pods.xcodeproj">
+      location = "group:Swift-Samples.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Third-Libs/Third-Libs.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:MyPlayground.playground">
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

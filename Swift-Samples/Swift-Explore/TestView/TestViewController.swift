@@ -23,14 +23,14 @@ class TestViewController: UIViewController {
         self.view.addSubview(testView);
         
         //添加一张Gif图
-        let path = NSBundle.mainBundle().pathForResource("testGif", ofType: "gif")
+        let path = Bundle.main.path(forResource: "testGif", ofType: "gif")
         //        let url = NSURL(fileURLWithPath: path!)
-        let gifData = NSData(contentsOfFile: path!)
+        let gifData = try? Data(contentsOf: URL(fileURLWithPath: path!))
         let image = FLAnimatedImage(animatedGIFData: gifData)
         
         gifImageView = FLAnimatedImageView()
-        gifImageView!.center = CGPointMake(self.view.center.x,self.view.center.y + 30);
-        gifImageView!.bounds = CGRectMake(0, 0, 100, 100)
+        gifImageView!.center = CGPoint(x: self.view.center.x,y: self.view.center.y + 30);
+        gifImageView!.bounds = CGRect(x: 0, y: 0, width: 100, height: 100)
         gifImageView!.animatedImage = image
         
         self.view.addSubview(gifImageView!)
@@ -39,19 +39,19 @@ class TestViewController: UIViewController {
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
-        gifImageView!.center = CGPointMake(self.view.center.x,self.view.center.y + 30);
+        gifImageView!.center = CGPoint(x: self.view.center.x,y: self.view.center.y + 30);
     }
     
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController!.navigationBar.hidden = true
-        self.tabBarController!.tabBar.hidden = true
+        self.navigationController!.navigationBar.isHidden = true
+        self.tabBarController!.tabBar.isHidden = true
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController!.navigationBar.hidden = false
-        self.tabBarController!.tabBar.hidden = false
+        self.navigationController!.navigationBar.isHidden = false
+        self.tabBarController!.tabBar.isHidden = false
     }
 
     override func didReceiveMemoryWarning() {

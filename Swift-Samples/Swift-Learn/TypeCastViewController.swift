@@ -11,21 +11,21 @@ import UIKit
 class TypeCastViewController: UIViewController {
     var library:[MediaItem]?
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController!.navigationBar.hidden = true
-        self.tabBarController!.tabBar.hidden = true
+        self.navigationController!.navigationBar.isHidden = true
+        self.tabBarController!.tabBar.isHidden = true
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController!.navigationBar.hidden = false
-        self.tabBarController!.tabBar.hidden = false
+        self.navigationController!.navigationBar.isHidden = false
+        self.tabBarController!.tabBar.isHidden = false
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.whiteColor()
+        self.view.backgroundColor = UIColor.white
 
         library = [
             Movie(name: "Casablanca", director: "Michael Curtiz"),
@@ -39,51 +39,51 @@ class TypeCastViewController: UIViewController {
         let selfCenter = self.view.center;
         
         //检查类型
-        let btn = UIButton(frame: CGRectMake(selfCenter.x - 50, selfCenter.y - 200, 100, 40))
-        btn.backgroundColor = UIColor.grayColor()
+        let btn = UIButton(frame: CGRect(x: selfCenter.x - 50, y: selfCenter.y - 200, width: 100, height: 40))
+        btn.backgroundColor = UIColor.gray
         btn.layer.cornerRadius = 10
-        btn.setTitle("检查类型", forState: .Normal)
-        btn.addTarget(self, action: "checkingType:", forControlEvents: .TouchUpInside)
+        btn.setTitle("检查类型", for: UIControlState())
+        btn.addTarget(self, action: #selector(TypeCastViewController.checkingType(_:)), for: .touchUpInside)
         self.view.addSubview(btn)
         
         //向下转型
-        let btn2 = UIButton(frame: CGRectMake(selfCenter.x - 50, selfCenter.y - 50, 100, 40))
-        btn2.backgroundColor = UIColor.grayColor()
+        let btn2 = UIButton(frame: CGRect(x: selfCenter.x - 50, y: selfCenter.y - 50, width: 100, height: 40))
+        btn2.backgroundColor = UIColor.gray
         btn2.layer.cornerRadius = 10
-        btn2.setTitle("向下转型", forState: .Normal)
-        btn2.addTarget(self, action: "downcasting:", forControlEvents: .TouchUpInside)
+        btn2.setTitle("向下转型", for: UIControlState())
+        btn2.addTarget(self, action: #selector(TypeCastViewController.downcasting(_:)), for: .touchUpInside)
         self.view.addSubview(btn2)
         
         //AnyObject类型
-        let btn3 = UIButton(frame: CGRectMake(selfCenter.x - 80, selfCenter.y + 50, 160, 40))
-        btn3.backgroundColor = UIColor.grayColor()
+        let btn3 = UIButton(frame: CGRect(x: selfCenter.x - 80, y: selfCenter.y + 50, width: 160, height: 40))
+        btn3.backgroundColor = UIColor.gray
         btn3.layer.cornerRadius = 10
-        btn3.setTitle("AnyObject类型", forState: .Normal)
-        btn3.addTarget(self, action: "anyObject:", forControlEvents: .TouchUpInside)
+        btn3.setTitle("AnyObject类型", for: UIControlState())
+        btn3.addTarget(self, action: #selector(TypeCastViewController.anyObject(_:)), for: .touchUpInside)
         self.view.addSubview(btn3)
         
         //Any类型
-        let btn4 = UIButton(frame: CGRectMake(selfCenter.x - 50, selfCenter.y + 200, 100, 40))
-        btn4.backgroundColor = UIColor.grayColor()
+        let btn4 = UIButton(frame: CGRect(x: selfCenter.x - 50, y: selfCenter.y + 200, width: 100, height: 40))
+        btn4.backgroundColor = UIColor.gray
         btn4.layer.cornerRadius = 10
-        btn4.setTitle("Any类型", forState: .Normal)
-        btn4.addTarget(self, action: "any:", forControlEvents: .TouchUpInside)
+        btn4.setTitle("Any类型", for: UIControlState())
+        btn4.addTarget(self, action: #selector(TypeCastViewController.any(_:)), for: .touchUpInside)
         self.view.addSubview(btn4)
         
     }
     
     
     //检查类型（Checking Type）
-    func checkingType(btn: UIButton) {
+    func checkingType(_ btn: UIButton) {
         
         //检查类型（Checking Type）
         var movieCount = 0
         var songCount = 0
         for item in library! {
             if item is Movie {
-                ++movieCount
+                movieCount += 1
             } else if item is Song {
-                ++songCount
+                songCount += 1
             }
         }
         print("Media library contains \(movieCount) movies and \(songCount) songs")
@@ -93,7 +93,7 @@ class TypeCastViewController: UIViewController {
     
     
     //向下转型（Downcasting）
-    func downcasting(btn: UIButton) {
+    func downcasting(_ btn: UIButton) {
         
         //向下转型（Downcasting）
         for item in library! {
@@ -114,7 +114,7 @@ class TypeCastViewController: UIViewController {
     
     //Any和AnyObject的类型转换
     //AnyObject类型
-    func anyObject(btn: UIButton) {
+    func anyObject(_ btn: UIButton) {
         
         //AnyObject类型
         let someObjects: [AnyObject] = [
@@ -142,7 +142,7 @@ class TypeCastViewController: UIViewController {
     }
     
     //Any类型
-    func any(btn: UIButton) {
+    func any(_ btn: UIButton) {
         
         //Any类型
         var things = [Any]()
@@ -173,7 +173,7 @@ class TypeCastViewController: UIViewController {
                 print("an (x, y) point at \(x), \(y)")
             case let movie as Movie:
                 print("a movie called '\(movie.name)', dir. \(movie.director)")
-            case let stringConverter as String -> String:
+            case let stringConverter as (String) -> String:
                 print(stringConverter("Michael"))
             default:
                 print("something else")

@@ -10,19 +10,19 @@ class MutiScrollViewController : UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = UIColor.lightGrayColor()
+        self.view.backgroundColor = UIColor.lightGray
     }
 
-    override func viewWillAppear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        self.navigationController!.navigationBar.hidden = true
-        self.tabBarController!.tabBar.hidden = true
+        self.navigationController!.navigationBar.isHidden = true
+        self.tabBarController!.tabBar.isHidden = true
     }
 
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController!.navigationBar.hidden = false
-        self.tabBarController!.tabBar.hidden = false
+        self.navigationController!.navigationBar.isHidden = false
+        self.tabBarController!.tabBar.isHidden = false
     }
 
 

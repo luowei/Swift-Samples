@@ -28,16 +28,21 @@ class ViewController: UIViewController, UITextFieldDelegate {
         }
     }
 
-    override func viewWillAppear(animated: Bool) {
-        super.viewWillAppear(animated)
-        self.navigationController!.navigationBar.hidden = true
-        self.tabBarController!.tabBar.hidden = true
+    //当接收到spotlight传来的activity
+    override func restoreUserActivityState(_ activity: NSUserActivity) {
+        
     }
     
-    override func viewWillDisappear(animated: Bool) {
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.navigationController!.navigationBar.isHidden = true
+        self.tabBarController!.tabBar.isHidden = true
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
-        self.navigationController!.navigationBar.hidden = false
-        self.tabBarController!.tabBar.hidden = false
+        self.navigationController!.navigationBar.isHidden = false
+        self.tabBarController!.tabBar.isHidden = false
     }
 
     override func viewDidLoad() {
@@ -48,45 +53,45 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let selfCenter = self.view.center;
 
         //状态标题
-        titleLbl = UILabel(frame: CGRectMake(selfCenter.x - 150, 30, 300, 60))
-        titleLbl?.backgroundColor = UIColor.greenColor()
-        titleLbl?.textAlignment = .Center
+        titleLbl = UILabel(frame: CGRect(x: selfCenter.x - 150, y: 30, width: 300, height: 60))
+        titleLbl?.backgroundColor = UIColor.green
+        titleLbl?.textAlignment = .center
         titleLbl?.text = "Hello"
         self.view.addSubview(titleLbl!)
 
         //进度数值
-        progressVal = UILabel(frame: CGRectMake(selfCenter.x - 40, 120, 80, 60))
+        progressVal = UILabel(frame: CGRect(x: selfCenter.x - 40, y: 120, width: 80, height: 60))
         progressVal?.text = "0";
         self.view.addSubview(progressVal!)
 
         //自定义数值设置框
-        customVal = UITextField(frame: CGRectMake(selfCenter.x - 65, 200, 60, 40))
-        customVal?.backgroundColor = UIColor.lightGrayColor()
-        customVal?.textAlignment = .Center
+        customVal = UITextField(frame: CGRect(x: selfCenter.x - 65, y: 200, width: 60, height: 40))
+        customVal?.backgroundColor = UIColor.lightGray
+        customVal?.textAlignment = .center
         customVal?.delegate = self
         self.view.addSubview(customVal!)
 
         //设置按钮
-        btn = UIButton(frame: CGRectMake(selfCenter.x + 5, 200, 60, 40))
-        btn?.backgroundColor = UIColor.grayColor()
+        btn = UIButton(frame: CGRect(x: selfCenter.x + 5, y: 200, width: 60, height: 40))
+        btn?.backgroundColor = UIColor.gray
         btn?.layer.cornerRadius = 10
-        btn!.setTitle("设置", forState: .Normal)
-        btn!.addTarget(self, action: "setupSlideVal:", forControlEvents: .TouchUpInside)
+        btn!.setTitle("设置", for: UIControlState())
+        btn!.addTarget(self, action: #selector(ViewController.setupSlideVal(_:)), for: .touchUpInside)
         self.view.addSubview(btn!)
 
         //进度条
-        progress = UIProgressView(progressViewStyle: .Default)
-        progress!.frame = CGRectMake(20, 300, selfFrame.size.width - 40, 2)
+        progress = UIProgressView(progressViewStyle: .default)
+        progress!.frame = CGRect(x: 20, y: 300, width: selfFrame.size.width - 40, height: 2)
         self.view.addSubview(progress!)
 
         //滑杆
-        slide = UISlider(frame: CGRectMake(20, 400, selfFrame.size.width - 40, 30))
+        slide = UISlider(frame: CGRect(x: 20, y: 400, width: selfFrame.size.width - 40, height: 30))
         slide!.minimumValue = 0
         slide!.maximumValue = 120
         slide!.value = 0
         self.view.addSubview(slide!);
 
-        slide!.addTarget(self, action: "slideChanged:", forControlEvents: .ValueChanged)
+        slide!.addTarget(self, action: #selector(ViewController.slideChanged(_:)), for: .valueChanged)
 
     }
 
@@ -95,50 +100,50 @@ class ViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    func textChanged(text:String) {
+    func textChanged(_ text:String) {
 //        UIAlertView(title: "Text改变了", message: "Text改变成了\(text)", delegate: nil, cancelButtonTitle: "OK").show()
         
-        let alertController = UIAlertController(title: "Text改变了", message: "Text改变成了\(text)", preferredStyle: UIAlertControllerStyle.Alert)
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default, handler: nil)
+        let alertController = UIAlertController(title: "Text改变了", message: "Text改变成了\(text)", preferredStyle: UIAlertControllerStyle.alert)
+        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil)
         alertController.addAction(okAction)
-        self.presentViewController(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: nil)
         
     }
 
     //当输入框完成编辑
-    func textFieldShouldReturn(textField: UITextField) -> Bool{
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool{
         textField.resignFirstResponder()
         self.textFieldDidChanged(textField)
         return true
     }
-    func textFieldDidChanged(textField: UITextField) {
+    func textFieldDidChanged(_ textField: UITextField) {
         if (textField.isEqual(customVal)) {
             progressVal!.text = textField.text!.isEmpty ? progressVal?.text:textField.text;
             slide!.value = Float((customVal?.text)!)!
-            slide?.sendAction("slideChanged:", to: self, forEvent: nil)
+            slide?.sendAction(#selector(ViewController.slideChanged(_:)), to: self, for: nil)
         }
     }
 
 
     //手动设置滑杆值
-    func setupSlideVal(btn: UIButton) {
+    func setupSlideVal(_ btn: UIButton) {
         slide!.value = Float((customVal?.text)!)!
-        slide?.sendAction("slideChanged:", to: self, forEvent: nil)
+        slide?.sendAction(#selector(ViewController.slideChanged(_:)), to: self, for: nil)
         
         self.text = String(slide!.value)
     }
 
     //当滑杆值发生变化
-    func slideChanged(slide: UISlider) {
+    func slideChanged(_ slide: UISlider) {
         progress?.progress = slide.value / 120
         progressVal?.text = String(slide.value)
         
 
-        let slideVal = CompareExpression.Number(slide.value);
+        let slideVal = CompareExpression.number(slide.value);
 
         //小于40,表示进度条在上传范围内
-        let val40 = CompareExpression.Number(40);
-        let uploadResult = compare(CompareExpression.Compare(slideVal, val40))
+        let val40 = CompareExpression.number(40);
+        let uploadResult = compare(CompareExpression.compare(slideVal, val40))
         switch Int(uploadResult) {
                 //小于40
         case CompareResult.Less.rawValue:
@@ -154,9 +159,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
                 //大于40 , 解压
         case CompareResult.Great.rawValue:
             //大于40,小于80,表示进度条在上传范围内
-            let val80 = CompareExpression.Number(80);
+            let val80 = CompareExpression.number(80);
 
-            let extractResult = compare(CompareExpression.Compare(slideVal, val80))
+            let extractResult = compare(CompareExpression.compare(slideVal, val80))
             switch Int(extractResult) {
                     //小于80
             case CompareResult.Less.rawValue:
@@ -172,9 +177,9 @@ class ViewController: UIViewController, UITextFieldDelegate {
                     //大于80 , 读取
             case CompareResult.Great.rawValue:
                 //大于80,小于100,表示在读取范围内
-                let val100 = CompareExpression.Number(100);
+                let val100 = CompareExpression.number(100);
 
-                let readResult = compare(CompareExpression.Compare(slideVal, val100))
+                let readResult = compare(CompareExpression.compare(slideVal, val100))
                 switch Int(readResult) {
                         //小于100
                 case CompareResult.Less.rawValue:
@@ -187,8 +192,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
 
                         //大于100
                 case CompareResult.Great.rawValue:
-                    let text = Flag.Read("已经读取完毕,正在执行数据操作...")
-                    self.titleLbl?.text = String(text)
+                    let text = Flag.read("已经读取完毕,正在执行数据操作...")
+                    self.titleLbl?.text = String(describing: text)
 
                 default:break
                 }
@@ -210,14 +215,14 @@ class ViewController: UIViewController, UITextFieldDelegate {
 enum Flag {
 
     //上传
-    case Upload(String)
+    case upload(String)
     //解压
-    case Extract(String)
+    case extract(String)
     //读取
-    case Read(String)
+    case read(String)
 
     //成功或失败
-    case IsOK(Int)
+    case isOK(Int)
 }
 
 
@@ -241,19 +246,19 @@ enum Status: String {
 //递归枚举
 
 enum CompareExpression {
-    case Number(Float)
-    indirect case Compare(CompareExpression, CompareExpression)
+    case number(Float)
+    indirect case compare(CompareExpression, CompareExpression)
 }
 
-func compare(expression: CompareExpression) -> Float {
+func compare(_ expression: CompareExpression) -> Float {
 
     switch expression {
             //直接返回相关值
-    case .Number(let value):
+    case .number(let value):
         return value
 
             //比较大小
-    case .Compare(let left, let right):
+    case .compare(let left, let right):
         if compare(left) > compare(right) {
             return 1
         } else if compare(left) < compare(right) {
@@ -269,7 +274,7 @@ func compare(expression: CompareExpression) -> Float {
 
 //结构体的使用
 
-struct CompareResult: OptionSetType {
+struct CompareResult: OptionSet {
     let rawValue: Int
     init(rawValue: Int) {
         self.rawValue = rawValue

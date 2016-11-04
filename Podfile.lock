@@ -1,10 +1,15 @@
 PODS:
-  - FLAnimatedImage (1.0.8)
+  - FLAnimatedImage (1.0.12)
+  - xg_ios_push (2.4.8)
 
 DEPENDENCIES:
   - FLAnimatedImage (~> 1.0.8)
+  - xg_ios_push
 
 SPEC CHECKSUMS:
-  FLAnimatedImage: f9422f796135aff80d8c00b2afc48015bb746e24
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
+  xg_ios_push: d7195f1ea5b244d9631cda6b49a4a83921318782
 
-COCOAPODS: 0.39.0
+PODFILE CHECKSUM: 9c80053ddbbe1fbd2d1b057c9f5e972227960b73
+
+COCOAPODS: 1.1.0

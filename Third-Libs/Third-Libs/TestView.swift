@@ -8,19 +8,19 @@
 
 import UIKit
 
-public class TestView: UIView {
+open class TestView: UIView {
     var textText : UILabel
 
     override public init (frame : CGRect) {
         
-        textText = UILabel(frame: CGRectMake(frame.size.width/2-100,frame.size.height/2-100,200,60))
+        textText = UILabel(frame: CGRect(x: frame.size.width/2-100,y: frame.size.height/2-100,width: 200,height: 60))
         textText.text = "这是测试视图"
-        textText.textAlignment = .Center
-        textText.font = UIFont.systemFontOfSize(24)
+        textText.textAlignment = .center
+        textText.font = UIFont.systemFont(ofSize: 24)
         
         super.init(frame : frame)
         
-        self.backgroundColor = UIColor.orangeColor()
+        self.backgroundColor = UIColor.orange
         
         setupViews()
     }
@@ -33,10 +33,10 @@ public class TestView: UIView {
         fatalError("This class does not support NSCoding")
     }
     
-    override public func layoutSubviews(){
+    override open func layoutSubviews(){
         let frame = (self.superview?.frame)!
         self.frame = frame;
-        textText.frame = CGRectMake(frame.size.width/2-100,frame.size.height/2-100,200,60)
+        textText.frame = CGRect(x: frame.size.width/2-100,y: frame.size.height/2-100,width: 200,height: 60)
     }
     
     func setupViews (){
@@ -44,7 +44,7 @@ public class TestView: UIView {
         self.addSubview(textText)
     }
 
-    public func aaa(){
+    open func aaa(){
         print("Hello World,This is TestView")
     }
 
