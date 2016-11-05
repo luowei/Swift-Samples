@@ -8,6 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		BEF06CE19817A6D32E1AFF2A /* MutiScrollViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BEF060369746F9A07DD18553 /* MutiScrollViewController.swift */; };
+		EA0234971DCE343700CF38B9 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0234961DCE343700CF38B9 /* ReplayKit.framework */; };
+		EA02349A1DCE343700CF38B9 /* MovieClipHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0234991DCE343700CF38B9 /* MovieClipHandler.swift */; };
+		EA02349C1DCE343700CF38B9 /* SampleHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA02349B1DCE343700CF38B9 /* SampleHandler.swift */; };
+		EA0234A31DCE343700CF38B9 /* ReplayKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA0234961DCE343700CF38B9 /* ReplayKit.framework */; };
+		EA0234A41DCE343700CF38B9 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA1A74691DBA348B0031AFCE /* UIKit.framework */; };
+		EA0234A71DCE343700CF38B9 /* BroadcastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0234A61DCE343700CF38B9 /* BroadcastViewController.swift */; };
+		EA0234AA1DCE343700CF38B9 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = EA0234A81DCE343700CF38B9 /* MainInterface.storyboard */; };
+		EA0234AE1DCE343700CF38B9 /* MyBroadCastUploadUI.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EA0234A21DCE343700CF38B9 /* MyBroadCastUploadUI.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		EA0234B11DCE343700CF38B9 /* MyBroadCastUpload.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = EA0234951DCE343700CF38B9 /* MyBroadCastUpload.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		EA0691E21C0D34FE003685E6 /* TypeCastViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0691E11C0D34FE003685E6 /* TypeCastViewController.swift */; };
 		EA0927351C1E890E001C69B1 /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA0927341C1E890E001C69B1 /* TestViewController.swift */; };
 		EA16D35B1DCCA488002ACCB5 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA16D35A1DCCA488002ACCB5 /* NotificationService.swift */; };
@@ -46,6 +55,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		EA0234AC1DCE343700CF38B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAFDF2871BE8B43000E14EF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA0234A11DCE343700CF38B9;
+			remoteInfo = MyBroadCastUploadUI;
+		};
+		EA0234AF1DCE343700CF38B9 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = EAFDF2871BE8B43000E14EF7 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = EA0234941DCE343700CF38B9;
+			remoteInfo = MyBroadCastUpload;
+		};
 		EA16D35D1DCCA488002ACCB5 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = EAFDF2871BE8B43000E14EF7 /* Project object */;
@@ -111,6 +134,8 @@
 			dstPath = "";
 			dstSubfolderSpec = 13;
 			files = (
+				EA0234AE1DCE343700CF38B9 /* MyBroadCastUploadUI.appex in Embed App Extensions */,
+				EA0234B11DCE343700CF38B9 /* MyBroadCastUpload.appex in Embed App Extensions */,
 				EA16D39B1DCCA86B002ACCB5 /* MyShareLinks.appex in Embed App Extensions */,
 				EA16D3B11DCCD432002ACCB5 /* MyShare.appex in Embed App Extensions */,
 				EA16D35F1DCCA488002ACCB5 /* MyNotificationService.appex in Embed App Extensions */,
@@ -140,6 +165,15 @@
 		962D311EA404BA99BED79166 /* Pods_Swift_Samples.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swift_Samples.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA24487C515AAD2C9B857024 /* Pods-Swift-Samples.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swift-Samples.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swift-Samples/Pods-Swift-Samples.debug.xcconfig"; sourceTree = "<group>"; };
 		BEF060369746F9A07DD18553 /* MutiScrollViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MutiScrollViewController.swift; sourceTree = "<group>"; };
+		EA0234951DCE343700CF38B9 /* MyBroadCastUpload.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyBroadCastUpload.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0234961DCE343700CF38B9 /* ReplayKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReplayKit.framework; path = System/Library/Frameworks/ReplayKit.framework; sourceTree = SDKROOT; };
+		EA0234991DCE343700CF38B9 /* MovieClipHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieClipHandler.swift; sourceTree = "<group>"; };
+		EA02349B1DCE343700CF38B9 /* SampleHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleHandler.swift; sourceTree = "<group>"; };
+		EA02349D1DCE343700CF38B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EA0234A21DCE343700CF38B9 /* MyBroadCastUploadUI.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = MyBroadCastUploadUI.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		EA0234A61DCE343700CF38B9 /* BroadcastViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BroadcastViewController.swift; sourceTree = "<group>"; };
+		EA0234A91DCE343700CF38B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		EA0234AB1DCE343700CF38B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EA0691E11C0D34FE003685E6 /* TypeCastViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TypeCastViewController.swift; path = "Swift-Learn/TypeCastViewController.swift"; sourceTree = "<group>"; };
 		EA0927341C1E890E001C69B1 /* TestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		EA09275B1C1E9290001C69B1 /* MyThirdLibs.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = MyThirdLibs.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -191,6 +225,23 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		EA0234921DCE343700CF38B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0234971DCE343700CF38B9 /* ReplayKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA02349F1DCE343700CF38B9 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0234A31DCE343700CF38B9 /* ReplayKit.framework in Frameworks */,
+				EA0234A41DCE343700CF38B9 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA16D3551DCCA488002ACCB5 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -285,6 +336,7 @@
 				EA16D36B1DCCA4DD002ACCB5 /* UserNotificationsUI.framework */,
 				EA16D37F1DCCA513002ACCB5 /* PhotosUI.framework */,
 				EA16D3811DCCA513002ACCB5 /* Photos.framework */,
+				EA0234961DCE343700CF38B9 /* ReplayKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -313,6 +365,26 @@
 				EA0927341C1E890E001C69B1 /* TestViewController.swift */,
 			);
 			path = TestView;
+			sourceTree = "<group>";
+		};
+		EA0234981DCE343700CF38B9 /* MyBroadCastUpload */ = {
+			isa = PBXGroup;
+			children = (
+				EA0234991DCE343700CF38B9 /* MovieClipHandler.swift */,
+				EA02349B1DCE343700CF38B9 /* SampleHandler.swift */,
+				EA02349D1DCE343700CF38B9 /* Info.plist */,
+			);
+			path = MyBroadCastUpload;
+			sourceTree = "<group>";
+		};
+		EA0234A51DCE343700CF38B9 /* MyBroadCastUploadUI */ = {
+			isa = PBXGroup;
+			children = (
+				EA0234A61DCE343700CF38B9 /* BroadcastViewController.swift */,
+				EA0234A81DCE343700CF38B9 /* MainInterface.storyboard */,
+				EA0234AB1DCE343700CF38B9 /* Info.plist */,
+			);
+			path = MyBroadCastUploadUI;
 			sourceTree = "<group>";
 		};
 		EA0691E01C0D348A003685E6 /* Swift-Learn */ = {
@@ -400,6 +472,8 @@
 				EA16D3951DCCA86B002ACCB5 /* MyShareLinks */,
 				EA16D3A81DCCD432002ACCB5 /* MyShare */,
 				EA16D3BA1DCCEC78002ACCB5 /* MySpotLightIndex */,
+				EA0234981DCE343700CF38B9 /* MyBroadCastUpload */,
+				EA0234A51DCE343700CF38B9 /* MyBroadCastUploadUI */,
 				EAFDF2A61BE8B43100E14EF7 /* Swift-SamplesTests */,
 				EAFDF2B11BE8B43100E14EF7 /* Swift-SamplesUITests */,
 				EAFDF2901BE8B43000E14EF7 /* Products */,
@@ -420,6 +494,8 @@
 				EA16D3941DCCA86B002ACCB5 /* MyShareLinks.appex */,
 				EA16D3A71DCCD432002ACCB5 /* MyShare.appex */,
 				EA16D3B91DCCEC78002ACCB5 /* MySpotLightIndex.appex */,
+				EA0234951DCE343700CF38B9 /* MyBroadCastUpload.appex */,
+				EA0234A21DCE343700CF38B9 /* MyBroadCastUploadUI.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -462,6 +538,40 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		EA0234941DCE343700CF38B9 /* MyBroadCastUpload */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA0234B71DCE343700CF38B9 /* Build configuration list for PBXNativeTarget "MyBroadCastUpload" */;
+			buildPhases = (
+				EA0234911DCE343700CF38B9 /* Sources */,
+				EA0234921DCE343700CF38B9 /* Frameworks */,
+				EA0234931DCE343700CF38B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyBroadCastUpload;
+			productName = MyBroadCastUpload;
+			productReference = EA0234951DCE343700CF38B9 /* MyBroadCastUpload.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+		EA0234A11DCE343700CF38B9 /* MyBroadCastUploadUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = EA0234B61DCE343700CF38B9 /* Build configuration list for PBXNativeTarget "MyBroadCastUploadUI" */;
+			buildPhases = (
+				EA02349E1DCE343700CF38B9 /* Sources */,
+				EA02349F1DCE343700CF38B9 /* Frameworks */,
+				EA0234A01DCE343700CF38B9 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MyBroadCastUploadUI;
+			productName = MyBroadCastUploadUI;
+			productReference = EA0234A21DCE343700CF38B9 /* MyBroadCastUploadUI.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		EA16D3571DCCA488002ACCB5 /* MyNotificationService */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = EA16D3621DCCA488002ACCB5 /* Build configuration list for PBXNativeTarget "MyNotificationService" */;
@@ -586,6 +696,8 @@
 				EA16D39A1DCCA86B002ACCB5 /* PBXTargetDependency */,
 				EA16D3B01DCCD432002ACCB5 /* PBXTargetDependency */,
 				EA16D3BF1DCCEC78002ACCB5 /* PBXTargetDependency */,
+				EA0234AD1DCE343700CF38B9 /* PBXTargetDependency */,
+				EA0234B01DCE343700CF38B9 /* PBXTargetDependency */,
 			);
 			name = "Swift-Samples";
 			productName = "Swift-Samples";
@@ -638,6 +750,16 @@
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = wodedata;
 				TargetAttributes = {
+					EA0234941DCE343700CF38B9 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = G3A2KYKYBU;
+						ProvisioningStyle = Automatic;
+					};
+					EA0234A11DCE343700CF38B9 = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = G3A2KYKYBU;
+						ProvisioningStyle = Automatic;
+					};
 					EA16D3571DCCA488002ACCB5 = {
 						CreatedOnToolsVersion = 8.0;
 						DevelopmentTeam = G3A2KYKYBU;
@@ -720,11 +842,28 @@
 				EA16D3B81DCCEC78002ACCB5 /* MySpotLightIndex */,
 				EAFDF2A21BE8B43100E14EF7 /* Swift-SamplesTests */,
 				EAFDF2AD1BE8B43100E14EF7 /* Swift-SamplesUITests */,
+				EA0234941DCE343700CF38B9 /* MyBroadCastUpload */,
+				EA0234A11DCE343700CF38B9 /* MyBroadCastUploadUI */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		EA0234931DCE343700CF38B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA0234A01DCE343700CF38B9 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0234AA1DCE343700CF38B9 /* MainInterface.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA16D3561DCCA488002ACCB5 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -847,6 +986,23 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		EA0234911DCE343700CF38B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA02349C1DCE343700CF38B9 /* SampleHandler.swift in Sources */,
+				EA02349A1DCE343700CF38B9 /* MovieClipHandler.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		EA02349E1DCE343700CF38B9 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EA0234A71DCE343700CF38B9 /* BroadcastViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		EA16D3541DCCA488002ACCB5 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -927,6 +1083,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		EA0234AD1DCE343700CF38B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA0234A11DCE343700CF38B9 /* MyBroadCastUploadUI */;
+			targetProxy = EA0234AC1DCE343700CF38B9 /* PBXContainerItemProxy */;
+		};
+		EA0234B01DCE343700CF38B9 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = EA0234941DCE343700CF38B9 /* MyBroadCastUpload */;
+			targetProxy = EA0234AF1DCE343700CF38B9 /* PBXContainerItemProxy */;
+		};
 		EA16D35E1DCCA488002ACCB5 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = EA16D3571DCCA488002ACCB5 /* MyNotificationService */;
@@ -970,6 +1136,14 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		EA0234A81DCE343700CF38B9 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				EA0234A91DCE343700CF38B9 /* Base */,
+			);
+			name = MainInterface.storyboard;
+			sourceTree = "<group>";
+		};
 		EA16D3701DCCA4DD002ACCB5 /* MyNotificationContent.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -1013,6 +1187,90 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		EA0234B21DCE343700CF38B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = G3A2KYKYBU;
+				INFOPLIST_FILE = MyBroadCastUpload/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wodedata.Test.MyBroadCastUpload;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EA0234B31DCE343700CF38B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = G3A2KYKYBU;
+				INFOPLIST_FILE = MyBroadCastUpload/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wodedata.Test.MyBroadCastUpload;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		EA0234B41DCE343700CF38B9 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = G3A2KYKYBU;
+				INFOPLIST_FILE = MyBroadCastUploadUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wodedata.Test.MyBroadCastUploadUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		EA0234B51DCE343700CF38B9 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = G3A2KYKYBU;
+				INFOPLIST_FILE = MyBroadCastUploadUI/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.wodedata.Test.MyBroadCastUploadUI;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
 		EA16D3601DCCA488002ACCB5 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1455,6 +1713,22 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		EA0234B61DCE343700CF38B9 /* Build configuration list for PBXNativeTarget "MyBroadCastUploadUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0234B41DCE343700CF38B9 /* Debug */,
+				EA0234B51DCE343700CF38B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		EA0234B71DCE343700CF38B9 /* Build configuration list for PBXNativeTarget "MyBroadCastUpload" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EA0234B21DCE343700CF38B9 /* Debug */,
+				EA0234B31DCE343700CF38B9 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		EA16D3621DCCA488002ACCB5 /* Build configuration list for PBXNativeTarget "MyNotificationService" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -1462,6 +1736,7 @@
 				EA16D3611DCCA488002ACCB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA16D3771DCCA4DD002ACCB5 /* Build configuration list for PBXNativeTarget "MyNotificationContent" */ = {
 			isa = XCConfigurationList;
@@ -1470,6 +1745,7 @@
 				EA16D3791DCCA4DD002ACCB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA16D38D1DCCA513002ACCB5 /* Build configuration list for PBXNativeTarget "MyPhotoEditing" */ = {
 			isa = XCConfigurationList;
@@ -1478,6 +1754,7 @@
 				EA16D38F1DCCA513002ACCB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA16D39C1DCCA86B002ACCB5 /* Build configuration list for PBXNativeTarget "MyShareLinks" */ = {
 			isa = XCConfigurationList;
@@ -1486,6 +1763,7 @@
 				EA16D39E1DCCA86B002ACCB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA16D3B21DCCD432002ACCB5 /* Build configuration list for PBXNativeTarget "MyShare" */ = {
 			isa = XCConfigurationList;
@@ -1494,6 +1772,7 @@
 				EA16D3B41DCCD432002ACCB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EA16D3C11DCCEC78002ACCB5 /* Build configuration list for PBXNativeTarget "MySpotLightIndex" */ = {
 			isa = XCConfigurationList;
@@ -1502,6 +1781,7 @@
 				EA16D3C31DCCEC78002ACCB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		EAFDF28A1BE8B43000E14EF7 /* Build configuration list for PBXProject "Swift-Samples" */ = {
 			isa = XCConfigurationList;

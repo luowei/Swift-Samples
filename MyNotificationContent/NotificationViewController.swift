@@ -5,6 +5,7 @@
 //  Created by luowei on 2016/11/4.
 //  Copyright © 2016年 wodedata. All rights reserved.
 //
+//参见Demo:https://github.com/onevcat/UserNotificationDemo
 
 import UIKit
 import UserNotifications

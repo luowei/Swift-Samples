@@ -14,6 +14,7 @@ import UIKit
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegate,UINavigationControllerDelegate,
         UITableViewDataSource, UITableViewDelegate {
+    
 
     var notificationFromLaunchOptions = false
     
@@ -25,6 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        if (launchOptions?[.localNotification] as? UILocalNotification) != nil {
+            application.applicationIconBadgeNumber = 0
+        }
 
         window = UIWindow(frame: UIScreen.main.bounds)
 
@@ -75,6 +80,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
             }
         }
         
+        //发送一条本地消息
+        self.sendNotification()
         
         return true
     }
@@ -253,6 +260,46 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UITabBarControllerDelegat
         tabBarController.view.layer.add(transition, forKey: nil)
     }
 
+    
+    //MARK: - Local Notification
+    func application(_ application: UIApplication, didReceive notification: UILocalNotification) {
+        if application.applicationState == .active {
+            let alertVC = UIAlertController(title: "新消息", message: "来自本地的一个通知消息，你有否需要休息一下！！！", preferredStyle: .alert)
+            let cancleAction = UIAlertAction(title: "确定", style: .default, handler: { (action:UIAlertAction) in
+//                let delay = 1.5 * Double(NSEC_PER_SEC)
+//                let time = DispatchTime.now() + Double(Int64(delay * Double(NSEC_PER_SEC))) / Double(NSEC_PER_SEC)
+//                DispatchQueue.main.asyncAfter(deadline: time) { () -> Void in
+//                    alertVC.dismiss(animated: true, completion: nil)
+//                }
+            })
+            alertVC.addAction(cancleAction)
+            self.window?.rootViewController?.present(alertVC, animated: true, completion: nil)
+        }
+        
+    }
+    
+    //MARK: - 发送本地通知
+    func sendNotification(){
+        if (UIDevice.current.systemVersion as NSString).floatValue >= 8.0 {
+            //注册本地消息
+            let settings = UIUserNotificationSettings(types: [.badge,.alert,.sound], categories: nil)
+            UIApplication.shared.registerUserNotificationSettings(settings)
+        }
+        
+        //let notification = NSNotification(name: NSNotification.Name(rawValue: "local_notification"), object: nil, userInfo: ["name":"此乃本地消息"])
+        let notification = UILocalNotification()
+        notification.timeZone = NSTimeZone.default
+        notification.fireDate = Date(timeIntervalSinceNow: 10)  //10秒钟后发通知
+        notification.alertBody = "我是来自本地的一个通知消息！！！"
+        notification.applicationIconBadgeNumber = 1
+        notification.alertTitle = "新消息"
+        notification.alertAction = "localNotifyAction"
+        
+        //添加到本地消息任务队列
+        UIApplication.shared.scheduleLocalNotification(notification)
+        //UIApplication.shared.scheduledLocalNotifications = [notification]
+    }
+    
 
 }
 
