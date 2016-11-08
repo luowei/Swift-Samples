@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS10Notification" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c11-X1-qCN">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="请求授权"/>
+                                <connections>
+                                    <action selector="requestAuthorization:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HJc-JR-YBg"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dCO-pG-UdM">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="通知处理"/>
+                                <connections>
+                                    <action selector="handleNotification:" destination="BYZ-38-t0r" eventType="touchUpInside" id="1rT-ms-ejf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XD4-Av-CYR">
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="自定义UI"/>
+                                <connections>
+                                    <action selector="customUI:" destination="BYZ-38-t0r" eventType="touchUpInside" id="iq3-fr-Onu"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="token:" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gp0-vh-9YY">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="settings:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CXW-To-aCF">
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="gp0-vh-9YY" firstAttribute="top" secondItem="c11-X1-qCN" secondAttribute="bottom" constant="2" id="7ab-qy-rGd"/>
+                            <constraint firstItem="XD4-Av-CYR" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="120" id="7x5-bw-Hei"/>
+                            <constraint firstItem="XD4-Av-CYR" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="9nZ-bk-kv8"/>
+                            <constraint firstItem="c11-X1-qCN" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A4a-1G-drU"/>
+                            <constraint firstItem="dCO-pG-UdM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="FUb-lz-Pb7"/>
+                            <constraint firstItem="CXW-To-aCF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ggm-Ld-Wko"/>
+                            <constraint firstItem="dCO-pG-UdM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="60" id="IJG-Gz-Ydv"/>
+                            <constraint firstAttribute="trailing" secondItem="gp0-vh-9YY" secondAttribute="trailing" priority="750" constant="8" id="OqR-YZ-vqt"/>
+                            <constraint firstItem="gp0-vh-9YY" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PnG-4Y-0X6"/>
+                            <constraint firstItem="c11-X1-qCN" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" constant="-120" id="S1t-ck-TlD"/>
+                            <constraint firstAttribute="trailing" secondItem="CXW-To-aCF" secondAttribute="trailing" priority="750" constant="8" id="Zmg-BX-e6T"/>
+                            <constraint firstItem="CXW-To-aCF" firstAttribute="top" secondItem="gp0-vh-9YY" secondAttribute="bottom" constant="4" id="bkz-np-km0"/>
+                            <constraint firstItem="gp0-vh-9YY" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" priority="750" constant="8" id="oqy-ie-h7e"/>
+                            <constraint firstItem="CXW-To-aCF" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" priority="750" constant="8" id="wFE-7N-lWE"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="settingsLabel" destination="CXW-To-aCF" id="7hr-dw-x86"/>
+                        <outlet property="tokenLabel" destination="gp0-vh-9YY" id="uqC-7l-tXU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="136.28185907046478"/>
+        </scene>
+    </scenes>
+</document>
